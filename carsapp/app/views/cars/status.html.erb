@@ -4,7 +4,10 @@
 <h2> Year: <%= @ashley_car.year %>  </h2>
 <h2> Speed: <%= @ashley_car.speed %> Km/h </h2>
 
-<form action="status" method="get">
-  <input  name="speed" placeholder="Accelerate!"/>
+<form action="accelerate" method="get">
   <input type="submit" value="Accelerate"/>
+</form>
+
+<form action="brake" method="get">
+<input type="submit" value="Brake!!"/>
 </form>

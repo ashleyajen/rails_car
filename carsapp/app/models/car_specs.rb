@@ -24,6 +24,16 @@ class CarSpecs
   end
 
   def accelerate
-    @speed + 10
+    @speed = @speed + 10
+    if @speed > 88
+      @speed = 88
+    end
+  end
+
+  def brake
+    @speed = @speed - 7
+    if @speed < 0
+      @speed =0
+    end
   end
 end

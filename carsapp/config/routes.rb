@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
+  # With hashie arrow: user types in /car_sim, appplication goes to cars controller and runs sim method, loads sim view
   get'/car_sim' => 'cars#sim'
-  get'/status' => 'status#actions'
+
+  # Without hashie arrow: user types in /car_sim/status, application goes to CarSim controller, runs status method, loads status view in views/car_sim
+  get'/status' => 'cars#status'
+
+  get'/accelerate' => 'cars#accelerate'
+  get'/brake' => 'cars#brake'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
