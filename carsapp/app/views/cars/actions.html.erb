@@ -1,1 +1,10 @@
 <h1>Status Page</h1>
+
+<h2> Make: <%= @ashley_car.make %>  </h2>
+<h2> Year: <%= @ashley_car.year %>  </h2>
+<h2> Speed: <%= @ashley_car.speed %> Km/h </h2>
+
+<form action="status" method="get">
+  <input  name="speed" placeholder="Accelerate!"/>
+  <input type="submit" value="Accelerate"/>
+</form>
