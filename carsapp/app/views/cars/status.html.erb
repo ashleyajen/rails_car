@@ -1,5 +1,5 @@
 <h1>Status Page</h1>
-
+<hr/>
 <h2> Make: <%= @ashley_car.make %>  </h2>
 <h2> Year: <%= @ashley_car.year %>  </h2>
 <h2> Speed: <%= @ashley_car.speed %> Km/h </h2>
@@ -9,5 +9,10 @@
 </form>
 
 <form action="brake" method="get">
-<input type="submit" value="Brake!!"/>
+  <input type="submit" value="Brake!!"/>
+</form>
+<hr/>
+<h2>Lights: <%= @ashley_car.lights %></h2>
+<form action="lights" method="get">
+  <input type="submit" value="Lights!"/>
 </form>

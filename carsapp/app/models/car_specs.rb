@@ -3,6 +3,7 @@ class CarSpecs
     @make = make
     @year = year
     @speed = 0
+    @lights = "off"
   end
 
   #to be called in the view
@@ -34,6 +35,14 @@ class CarSpecs
     @speed = @speed - 7
     if @speed < 0
       @speed =0
+    end
+  end
+
+  def lights
+    if @lights == "off"
+      @lights = "on"
+    elsif @lights == "on"
+      @lights = "off"
     end
   end
 end

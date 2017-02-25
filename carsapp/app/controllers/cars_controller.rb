@@ -39,4 +39,15 @@ class CarsController < ApplicationController
     session[:ashley_car] = @ashley_car.to_yaml
     render "status.html.erb"
   end
+
+  def lights
+    CarSpecs
+    @make = params[:make]
+    @year = params[:year]
+    @ashley_car = YAML.load(session[:ashley_car])
+    @ashley_car.lights
+    session[:ashley_car] = @ashley_car.to_yaml
+    render "status.html.erb"
+  end
+
 end
